@@ -9,7 +9,6 @@
 
 .App-header-container {
   background-color: #222;
-  height: 150px;
   height: 75px;
   position: fixed;
   width: 100%;
@@ -75,7 +74,6 @@ blockquote{
   font-size: 2.4em;
   width: 400px;
   font-family:Open Sans;
-  height: 160px;
   font-style:italic;
   color: #F5DEB3;
   padding:1.2em 30px 1.2em 75px;
@@ -259,7 +257,6 @@ blockquote span{
     }
     blockquote{
         font-size: 1.4em;
-        height: 90px;
         margin-inline-end: 10px;
     }
 
@@ -270,20 +267,29 @@ blockquote span{
 }
 
 @media only screen and (max-width: 580px) {
+    .App-header-container {
+        height: 60px;
+    }
     .App-image {
         height: 300px;
-        margin-top: 92px;
+        margin-top: 60px;
+    }
+    .App-logo {
+        height: 60px;
     }
     .App-header .title h2 {
-        font-size: 18px;
+        font-size: 14px;
+        margin-left: 10px;
     }
 
-    .App-header .title .contact {
+    .App-header .contact {
         font-size: 10px;
     }
 
     blockquote {
         font-size: 1.2em;
+        padding: 1.2em 30px 1.2em 30px;
+
     }
 
     .skills {
