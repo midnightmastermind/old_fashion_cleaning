@@ -34,15 +34,16 @@ class App extends Component {
             </div>
             <div className="services-description">
                 <p>Services Offered:</p>
-                <ul class="a">
+                <ul>
                   <li>Residential & Commerical Cleaning</li>
                   <li>Pressure Washing</li>
-                  <li>Virus Disinfected</li>
-                  <li>Apartment Move-out Cleaning</li>
+                  <li>Virus Disinfecting</li>
+                  <li>Apartment Move-out Cleaning & Common Hallways</li>
                   <li>Basement Web Cleaning</li>
                   <li>Garage & Basement Cleaning</li>
                   <li>Furniture Vaccumed & Moved</li>
                   <li>Organic Cleaning Available</li>
+                  <li>Hand Cleaned Flooring</li>
                 </ul>
             </div>
         </div>
@@ -56,7 +57,7 @@ class App extends Component {
                   <li>Very Detailed</li>
                   <li>Great Reviews & References</li>
                   <li>Honest, Reasonable, Reliable</li>
-                  <li>Flat Rate (No Convaluted Charges or Fees)</li>
+                  <li>Flat Rate (No Cancellation Charges or Fees)</li>
                   <li>Flexible Hours & Cleaning Details</li>
                   <li>Your Chemicals or Mine</li>
                   <li>Own Cleaning Supplies & Equipment</li>

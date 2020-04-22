@@ -175,7 +175,7 @@ blockquote span{
     width: 50%;
 }
 .skills .skills-image {
-    background-image: url("./cleaning.jpeg");
+    background-image: url("./cleaning.jpg");
 
     /* Background image is centered vertically and horizontally at all times */
     background-position: center center;
@@ -250,10 +250,6 @@ blockquote span{
         font-size: 12px;
         margin-right: 10px;
     }
-
-    .skills .skills-image {
-        background-position-x: right;
-    }
 }
 @media only screen and (max-width: 700px) {
     .contact {
@@ -274,7 +270,7 @@ blockquote span{
         width: 7em;
     }
     .skills .skills-image {
-        background-position-x: -220px;
+        background-position-x: -84px;
     }
 }
 
@@ -306,6 +302,6 @@ blockquote span{
     }
 
     .skills .skills-image {
-        background-position-x: -354px;
+        background-position-x: -148px;
     }
 }
