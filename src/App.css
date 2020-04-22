@@ -72,7 +72,7 @@
 }
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
-blockquote{
+.App-image .quote{
   font-size: 2.4em;
   width: 400px;
   font-family:Open Sans;
@@ -85,7 +85,7 @@ blockquote{
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
-blockquote::before{
+.App-image .quote::before{
   font-family:Arial;
   content: "\201C";
   color: #F5DEB3;
@@ -95,11 +95,11 @@ blockquote::before{
   top:-10px;
 }
 
-blockquote::after{
+.App-image .quote::after{
   content: '';
 }
 
-blockquote span{
+.App-image .quote span{
   display:block;
   color: #F5DEB3;
   font-style: normal;
@@ -138,7 +138,17 @@ blockquote span{
 
 .services-offered .services-description {
     width: 50%;
-    background-color: #F5DEB3;
+    background-image: url("./wooden-effect-tiles.jpg");
+
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
     font-family: "Corbert Condensed Italic";
     font-weight: normal;
     font-size: 25px;
@@ -147,6 +157,9 @@ blockquote span{
 .services-offered .services-description p {
     text-align: left;
     margin-left: 25px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 .services-offered .services-description ul {
     text-align: left;
@@ -160,16 +173,17 @@ blockquote span{
 .services-offered .services-description ul > li {
     display: block;
     margin: 0 5px 7px 0;
-    background-color: #DCC7A1;
+    background-color: #DCC8AF;
     font-size: 16px;
     color: #333;
     padding: 5px 0 5px 20px;
     text-decoration: none;
+    border: 1px solid black;
 }
 
 .skills {
     display: flex;
-    height: auto;;
+    height: auto;
 }
 .skills .skills-image-container {
     width: 50%;
@@ -192,7 +206,17 @@ blockquote span{
 
 .skills .skills-description {
     width: 50%;
-    background-color: #F5DEB3;
+    background-image: url("./wooden-effect-tiles.jpg");
+
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
     font-family: "Corbert Condensed Italic";
     font-weight: normal;
     font-size: 25px;
@@ -201,6 +225,9 @@ blockquote span{
 .skills .skills-description p {
     text-align: left;
     margin-left: 25px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 .skills .skills-description ul {
     text-align: left;
@@ -214,11 +241,85 @@ blockquote span{
 .skills .skills-description ul > li {
     display: block;
     margin: 0 5px 7px 0;
-    background-color: #DCC7A1;
+    background-color: #DCC8AF;
     font-size: 16px;
     color: #333;
     padding: 5px 0 5px 20px;
     text-decoration: none;
+    border: 1px solid black;
+}
+
+.reviews {
+    height: 500px;
+    width: 100%;
+    background-image: url("./reviews.jpg");
+    background-position: center center;
+
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+
+    /* Background image is fixed in the viewport so that it doesn't move when
+    the content's height is greater than the image's height */
+    background-attachment: fixed;
+
+    /* This is what makes the background image rescale based
+    on the container's size */
+    background-size: cover;
+    background-color: #464646;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.reviews .quote{
+  font-size: 1em;
+  height: 200px;
+  font-family:Open Sans;
+  font-style:italic;
+  color: white;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid white;
+  position: relative;
+  background: transparent;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.reviews .quote::before{
+  font-family:Arial;
+  content: "\201C";
+  color: white;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+.reviews .quote::after{
+  content: '';
+}
+
+.reviews .quote span{
+  display:block;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
+.footer {
+    height: 700px;
+    width: 100%;
+    background-image: url("./bella.jpg");
+
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
 }
 @media only screen and (max-width: 1050px) {
     .services-offered p {
@@ -260,7 +361,7 @@ blockquote span{
         background-attachment: inherit;
     }
 
-    blockquote{
+    .App-image .quote{
         font-size: 1.4em;
         margin-inline-end: 10px;
     }
@@ -295,7 +396,7 @@ blockquote span{
         font-size: 10px;
     }
 
-    blockquote {
+    .App-image .quote {
         font-size: 1.2em;
         padding: 1.2em 30px 1.2em 30px;
 

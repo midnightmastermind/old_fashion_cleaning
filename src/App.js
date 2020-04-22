@@ -68,6 +68,15 @@ class App extends Component {
                 <div className="skills-image"></div>
             </div>
         </div>
+        <div className="divider"></div>
+        <div className="reviews">
+            <blockquote className="quote">Todd has been my cleaning guy for almost 10 years. You couldn't ask for a better cleaner or a more honest person to come into your home.<span>-Judy M</span></blockquote>
+            <blockquote className="quote">Todd was referred to me by Frisia day, and has done great work at my home for over two years!<span>-Carol K</span></blockquote>
+            <blockquote className="quote">Excellent cleaning company. Despite my dog doing his best to leave orders in my house. Todd always finds a way to leave my house tidy and smelling fresh. That same dog of mine is allergic to dust mites Todd has made his life that much more pleasant with his cleaning. Would recommend to anybody.<span>-Marteze M</span></blockquote>
+        </div>
+        <div className="divider"></div>
+        <div className="footer"></div>
+        <div className="divider"></div>
       </div>
     );
   }
