@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import brush from './brush_header.png';
 import brush_point from './brush_point.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import './App.css';
 
 class App extends Component {
@@ -13,8 +16,9 @@ class App extends Component {
               <h2>Old Fashion Cleaning</h2>
             </div>
             <div className="contact">
-               <code>&#9990; 414-587-8088</code>
-               <code>&#9993; todd@oldfashioncleaning.org</code>
+               <code><a href="tel:414-587-8088"><FontAwesomeIcon icon={faPhone} /> 414-587-8088</a></code>
+               <code><a href="mailto:todd@oldfashioncleaning.org"><FontAwesomeIcon icon={faEnvelope} /> todd@oldfashioncleaning.org</a></code>
+               <code><a href="https://www.facebook.com/Todd-Pomerenke-Old-Fashion-Cleaning-198493246828195"><FontAwesomeIcon icon={faFacebookF}/> Old Fashion Cleaning</a></code>
             </div>
 
         </div>

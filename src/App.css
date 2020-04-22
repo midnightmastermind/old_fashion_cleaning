@@ -35,7 +35,9 @@
     font-weight: normal;
     text-decoration: underline overline;
 }
-
+.App-header a {
+    color: white;
+}
 .App-image {
     height: 700px;
     width: 100%;
