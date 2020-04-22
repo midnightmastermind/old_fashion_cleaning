@@ -22,6 +22,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding-left: 10px;
+    min-width: 592px;
 }
 .App-header .title {
      color: white;
@@ -42,6 +43,7 @@
     color: white;
 }
 .App-image {
+    min-width: 592px;
     height: 700px;
     width: 100%;
     /* Location of the image */
@@ -66,6 +68,7 @@
     background-color: #464646;
     display: flex;
     justify-content: flex-end;
+    padding-top: 158px;
     align-items: flex-end;
 }
 
@@ -116,6 +119,7 @@ blockquote span{
 .services-offered {
     display: flex;
     height: 345px;
+    min-width: 592px;
 }
 .services-offered .services-image-container {
     width: 50%;
@@ -169,6 +173,7 @@ blockquote span{
 .skills {
     display: flex;
     height: 417px;
+    min-width: 592px;
 }
 .skills .skills-image-container {
     width: 50%;
@@ -217,4 +222,10 @@ blockquote span{
     color: #333;
     padding: 5px 0 0 20px;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 700px) {
+    .App-image {
+        background-attachment: inherit;
+    }
 }
