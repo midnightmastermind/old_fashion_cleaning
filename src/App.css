@@ -67,6 +67,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    background-position-y: 75px;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
@@ -273,6 +274,7 @@ blockquote span{
     .App-image {
         height: 300px;
         margin-top: 60px;
+        background-position-y: 0;
     }
     .App-logo {
         height: 60px;
