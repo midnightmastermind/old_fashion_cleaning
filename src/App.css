@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: #222;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -115,7 +116,7 @@ blockquote span{
 }
 .services-offered {
     display: flex;
-    height: 345px;
+    height: auto;
 }
 .services-offered .services-image-container {
     width: 50%;
@@ -168,7 +169,7 @@ blockquote span{
 
 .skills {
     display: flex;
-    height: 417px;
+    height: auto;;
 }
 .skills .skills-image-container {
     width: 50%;
@@ -186,6 +187,7 @@ blockquote span{
        on the container's size */
     background-size: cover;
     height: 100%;
+    background-position-x: 0px;
 }
 
 .skills .skills-description {
@@ -218,15 +220,7 @@ blockquote span{
     padding: 5px 0 5px 20px;
     text-decoration: none;
 }
-
-@media only screen and (max-width: 700px) {
-    .contact {
-        margin-left: 10px;
-    }
-    .App-image {
-        height: 500px;
-        background-attachment: inherit;
-    }
+@media only screen and (max-width: 1050px) {
     .services-offered p {
         margin: 10px;
     }
@@ -256,6 +250,20 @@ blockquote span{
         font-size: 12px;
         margin-right: 10px;
     }
+
+    .skills .skills-image {
+        background-position-x: right;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .contact {
+        margin-left: 10px;
+    }
+    .App-image {
+        height: 500px;
+        background-attachment: inherit;
+    }
+
     blockquote{
         font-size: 1.4em;
         margin-inline-end: 10px;
@@ -264,6 +272,9 @@ blockquote span{
     .quote-image {
         margin-left: 25px;
         width: 7em;
+    }
+    .skills .skills-image {
+        background-position-x: -220px;
     }
 }
 
@@ -294,7 +305,7 @@ blockquote span{
 
     }
 
-    .skills {
-        height: 435px;
+    .skills .skills-image {
+        background-position-x: -260px;
     }
 }
