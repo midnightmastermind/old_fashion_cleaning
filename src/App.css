@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #F5DEB3;
+  background-color: #222;
 }
 
 .App-logo {
@@ -12,9 +12,204 @@
   height: 150px;
   padding: 20px;
   color: white;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
-.App-intro {
-  font-size: large;
+.App-header .title {
+    display: flex;
+    align-items: center;
+}
+.App-header .contact {
+    display: flex;
+    flex-direction: column;
+}
+.App-header .title h2 {
+    margin-left: 20px;
+    font-family: "Corbert Condensed Italic";
+    font-weight: normal;
+    text-decoration: underline overline;
 }
 
+.App-image {
+    height: 700px;
+    width: 100%;
+    /* Location of the image */
+    background-image: url("./family.jpg");
+
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+
+    /* Background image is fixed in the viewport so that it doesn't move when
+       the content's height is greater than the image's height */
+    background-attachment: fixed;
+
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
+
+    /* Set a background color that will be displayed
+       while the background image is loading */
+    background-color: #464646;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+blockquote{
+  font-size: 2.4em;
+  width: 400px;
+  font-family:Open Sans;
+  height: 160px;
+  font-style:italic;
+  color: #F5DEB3;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid #F5DEB3;
+  position: relative;
+  background: transparent;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color: #F5DEB3;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color: #F5DEB3;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
+.quote-image {
+    width: 12em;
+}
+
+.divider {
+    height: 25px;
+}
+.services-offered {
+    display: flex;
+    height: 345px;
+}
+.services-offered .services-image-container {
+    width: 50%;
+}
+.services-offered .services-image {
+    background-image: url("./house.jpeg");
+
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
+    height: 100%;
+}
+
+.services-offered .services-description {
+    width: 50%;
+    background-color: #F5DEB3;
+    font-family: "Corbert Condensed Italic";
+    font-weight: normal;
+    font-size: 25px;
+    display: flex;
+}
+.services-offered .services-description p {
+    text-align: left;
+    margin-left: 25px;
+}
+.services-offered .services-description ul {
+    text-align: left;
+    margin-left: 35px;
+    list-style: none;
+    margin: 1.75rem 0;
+    padding-left: 3rem;
+}
+.services-offered .services-description ul > li {
+    display: block;
+    width: 300px;
+    height: 26px;
+    margin: 0 35px 7px 0;
+    background-color: #DCC7A1;
+    font-size: 16px;
+    color: #333;
+    padding: 5px 0 0 20px;
+    text-decoration: none;
+}
+
+.skills {
+    display: flex;
+    height: 417px;
+}
+.skills .skills-image-container {
+    width: 50%;
+}
+.skills .skills-image {
+    background-image: url("./cleaning.jpeg");
+
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
+    height: 100%;
+}
+
+.skills .skills-description {
+    width: 50%;
+    background-color: #F5DEB3;
+    font-family: "Corbert Condensed Italic";
+    font-weight: normal;
+    font-size: 25px;
+    display: flex;
+}
+.skills .skills-description p {
+    text-align: left;
+    margin-left: 25px;
+}
+.skills .skills-description ul {
+    text-align: left;
+    margin-left: 35px;
+    list-style: none;
+    margin: 1.75rem 0;
+    padding-left: 3rem;
+}
+.skills .skills-description ul > li {
+    display: block;
+    width: 388px;
+    height: 26px;
+    margin: 0 35px 7px 0;
+    background-color: #DCC7A1;
+    font-size: 16px;
+    color: #333;
+    padding: 5px 0 0 20px;
+    text-decoration: none;
+}
