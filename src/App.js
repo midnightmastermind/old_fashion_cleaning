@@ -10,17 +10,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-            <div className="title">
-              <img src={brush} className="App-logo" alt="logo" />
-              <h2>Old Fashion Cleaning</h2>
+        <div className="App-header-container">
+            <div className="App-header">
+                <div className="title">
+                  <img src={brush} className="App-logo" alt="logo" />
+                  <h2>Old Fashion Cleaning</h2>
+                </div>
+                <div className="contact">
+                   <code><a href="tel:414-587-8088"><FontAwesomeIcon icon={faPhone} /> 414-587-8088</a></code>
+                   <code><a href="mailto:todd@oldfashioncleaning.org"><FontAwesomeIcon icon={faEnvelope} /> todd@oldfashioncleaning.org</a></code>
+                   <code><a href="https://www.facebook.com/Todd-Pomerenke-Old-Fashion-Cleaning-198493246828195"><FontAwesomeIcon icon={faFacebookF}/> Old Fashion Cleaning</a></code>
+                </div>
             </div>
-            <div className="contact">
-               <code><a href="tel:414-587-8088"><FontAwesomeIcon icon={faPhone} /> 414-587-8088</a></code>
-               <code><a href="mailto:todd@oldfashioncleaning.org"><FontAwesomeIcon icon={faEnvelope} /> todd@oldfashioncleaning.org</a></code>
-               <code><a href="https://www.facebook.com/Todd-Pomerenke-Old-Fashion-Cleaning-198493246828195"><FontAwesomeIcon icon={faFacebookF}/> Old Fashion Cleaning</a></code>
-            </div>
-
         </div>
         <div className="App-image">
             <img src={brush_point} className="quote-image" alt="" />
