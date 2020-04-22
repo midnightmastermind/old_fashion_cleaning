@@ -14,6 +14,7 @@
   position: fixed;
   width: 100%;
   z-index: 1;
+  top: 0px;
 }
 .App-header {
     display: flex;
@@ -22,7 +23,6 @@
     max-width: 1200px;
     margin: 0 auto;
     padding-left: 10px;
-    min-width: 592px;
 }
 .App-header .title {
      color: white;
@@ -67,7 +67,6 @@
     background-color: #464646;
     display: flex;
     justify-content: flex-end;
-    padding-top: 158px;
     align-items: flex-end;
 }
 
@@ -222,9 +221,6 @@ blockquote span{
 }
 
 @media only screen and (max-width: 700px) {
-    .App-header {
-        justify-content:flex-start;
-    }
     .contact {
         margin-left: 10px;
     }
@@ -270,5 +266,27 @@ blockquote span{
     .quote-image {
         margin-left: 25px;
         width: 7em;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .App-image {
+        height: 300px;
+        margin-top: 92px;
+    }
+    .App-header .title h2 {
+        font-size: 18px;
+    }
+
+    .App-header .title .contact {
+        font-size: 10px;
+    }
+
+    blockquote {
+        font-size: 1.2em;
+    }
+
+    .skills {
+        height: 435px;
     }
 }
