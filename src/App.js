@@ -7,10 +7,7 @@ import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import './App.css';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-
-var api_key = '642eb214bebd650a2c6cb410f5bc0bcf-3fb021d1-2c8e68bc';
-var domain = 'oldfashioncleaning.org';
-var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+// const EmailService = require('./EmailService')
 
 class App extends Component {
     	constructor(props) {
@@ -36,30 +33,26 @@ class App extends Component {
 
         handleContactSubmit(event) {
         	if (this.state.message && this.state.email) {
-        		const email = this.state.email;
+        		/*const email = this.state.email;
                 const message = this.state.message;
-                const todd_email = "todd@oldfashioncleaning.org"
-                const thank_you_data = {
-                  from: todd_email,
-                  to: email,
-                  subject: 'Thank you!',
-                  text: 'Thank you so much for your message. It is much appreciated -Todd Pomerenke (Old Fashion Cleaning)'
-                };
+                const todd_email = "todd@oldfashioncleaning.org";
 
-                const message_data = {
-                  from: email,
-                  to: todd_email,
-                  subject: 'New Message from Old Fashion Cleaning Website',
-                  text: message
-                };
+                EmailService.sendText(todd_email, email, 'New Message from Old Fashion Cleaning Website', message)
+                  .then(() => {
+                    console.log("complete")
+                  })
+                  .catch(() => {
+                    console.log("error")
+                  })
 
-        		mailgun.messages().send(message_data, function (error, body) {
-                  console.log(body);
-                });
-                mailgun.messages().send(thank_you_data, function (error, body) {
-                  console.log(body);
-                });
-        		this.setState({submitted: true});
+              EmailService.sendText(email, todd_email, 'Thank You!', 'Thank you so much for your message. It is much appreciated -Todd Pomerenke (Old Fashion Cleaning)')
+                .then(() => {
+                  console.log("complete")
+                })
+                .catch(() => {
+                  console.log("error")
+                })
+        		this.setState({submitted: true});*/
           	  }
               event.preventDefault();
         }
@@ -132,14 +125,13 @@ class App extends Component {
             <blockquote className="quote">Excellent cleaning company. Despite my dog doing his best to leave orders in my house. Todd always finds a way to leave my house tidy and smelling fresh. That same dog of mine is allergic to dust mites Todd has made his life that much more pleasant with his cleaning. Would recommend to anybody.<span>-Marteze M</span></blockquote>
         </div>
         <div className="divider"></div>
-        <div className="bugmessage">
+        <div className="message">
             <div className="bella">
             </div>
             {!this.state.submitted && (
               <div className="contact-form">
                   <div className="title">Leave a Message for Todd or Write a Review</div>
                       <TextField
-                          id="outlined-required"
                           label="Email"
                           type="email"
                           name="email"
@@ -150,10 +142,9 @@ class App extends Component {
                           onChange={this.handleEmailChange}
                           />
                       <TextField
-                        id="outlined-multiline-flexible"
                         label="Message/Review"
                         multiline
-                        rowsMax={4}
+                        rows={4}
                         margin="normal"
                         variant="filled"
                         className="message-box input"
