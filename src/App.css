@@ -331,39 +331,31 @@
     justify-content: flex-end;
     align-items: flex-end;
 }
+
 .message .bella .quote {
-      font-size: 2.4em;
-      width: auto;
-      font-family:Open Sans;
-      font-style:italic;
-      color: white;
-      padding:1.2em 30px 1.2em 75px;
-      position: relative;
-      background: transparent;
-      text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+	position: relative;
+	background: #ffffff;
+	border-radius: .4em;
+    font-size: 2.4em;
+    padding: 10px;
+    background-color: white;
+    color: black;
 }
 
-.message .bella .quote::before{
-  font-family:Arial;
-  content: "\201C";
-  color: #F5DEB3;
-  font-size:2em;
-  position: absolute;
-  left: 10px;
-  top:-10px;
+.message .bella .quote::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-bottom-color: #ffffff;
+	border-top: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-top: -20px;
 }
-.message .bella .quote::after{
-  content: '';
-}
-
-.message .bella .quote span{
-  display:block;
-  color: white;
-  font-style: normal;
-  font-weight: bold;
-  margin-top:1em;
-}
-
 .message .contact-form {
     width: 50%;
     display: flex;
@@ -467,6 +459,7 @@
     }
     .message .bella .quote {
         font-size: 1em;
+        top: 26px;
     }
 }
 

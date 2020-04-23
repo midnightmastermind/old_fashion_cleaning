@@ -128,7 +128,7 @@ class App extends Component {
         <div className="divider"></div>
         <div className="message">
             <div className="bella">
-                <blockquote className="quote">Bark!<span>-Bella</span></blockquote>
+                <blockquote className="quote">"Please Leave a Message"</blockquote>
             </div>
             {!this.state.submitted && (
               <div className="contact-form">
