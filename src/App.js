@@ -5,8 +5,65 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import './App.css';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+
+var api_key = '642eb214bebd650a2c6cb410f5bc0bcf-3fb021d1-2c8e68bc';
+var domain = 'oldfashioncleaning.org';
+var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
 
 class App extends Component {
+    	constructor(props) {
+          super(props);
+          this.state = {
+    		  email: '',
+    		  message: '',
+    		  submitted: false
+    	  };
+
+          this.handleEmailChange = this.handleEmailChange.bind(this);
+          this.handleContactSubmit = this.handleContactSubmit.bind(this);
+    	  this.handleMessageChange = this.handleMessageChange.bind(this);
+        }
+
+        handleEmailChange(event) {
+          this.setState({email: event.target.value});
+        }
+
+    	handleMessageChange(event) {
+          this.setState({message: event.target.value});
+        }
+
+        handleContactSubmit(event) {
+        	if (this.state.message && this.state.email) {
+        		const email = this.state.email;
+                const message = this.state.message;
+                const todd_email = "todd@oldfashioncleaning.org"
+                const thank_you_data = {
+                  from: todd_email,
+                  to: email,
+                  subject: 'Thank you!',
+                  text: 'Thank you so much for your message. It is much appreciated -Todd Pomerenke (Old Fashion Cleaning)'
+                };
+
+                const message_data = {
+                  from: email,
+                  to: todd_email,
+                  subject: 'New Message from Old Fashion Cleaning Website',
+                  text: message
+                };
+
+        		mailgun.messages().send(message_data, function (error, body) {
+                  console.log(body);
+                });
+                mailgun.messages().send(thank_you_data, function (error, body) {
+                  console.log(body);
+                });
+        		this.setState({submitted: true});
+          	  }
+              event.preventDefault();
+        }
+
   render() {
     return (
       <div className="App">
@@ -75,8 +132,42 @@ class App extends Component {
             <blockquote className="quote">Excellent cleaning company. Despite my dog doing his best to leave orders in my house. Todd always finds a way to leave my house tidy and smelling fresh. That same dog of mine is allergic to dust mites Todd has made his life that much more pleasant with his cleaning. Would recommend to anybody.<span>-Marteze M</span></blockquote>
         </div>
         <div className="divider"></div>
-        <div className="footer"></div>
+        <div className="bugmessage">
+            <div className="bella">
+            </div>
+            {!this.state.submitted && (
+              <div className="contact-form">
+                  <div className="title">Leave a Message for Todd or Write a Review</div>
+                      <TextField
+                          id="outlined-required"
+                          label="Email"
+                          type="email"
+                          name="email"
+                          autoComplete="email"
+                          margin="normal"
+                          variant="filled"
+                          className="email-box input"
+                          onChange={this.handleEmailChange}
+                          />
+                      <TextField
+                        id="outlined-multiline-flexible"
+                        label="Message/Review"
+                        multiline
+                        rowsMax={4}
+                        margin="normal"
+                        variant="filled"
+                        className="message-box input"
+                        onChange={this.handleMessageChange}
+                      />
+                    <Button className="button" variant="contained" color="primary" onClick={this.handleContactSubmit}>
+                      Submit
+                    </Button>
+              </div>
+            )}
+            {this.state.submitted && (<div className="contact-form"><div className="title">Thank you for reaching out!</div></div>)}
+        </div>
         <div className="divider"></div>
+        <div className="footer">oldfashioncleaning.org | creater: Josh Pomerenke</div>
       </div>
     );
   }
