@@ -89,7 +89,7 @@ class App extends Component {
                   <li>Pressure Washing</li>
                   <li>COVID 19, Virus, & Flu Disinfecting for Home/Office (light switches, phone receivers, arm-rests, door handles, bathrooms, kitchen)</li>
                   <li>Apartment Move-out Cleaning & Common Hallways</li>
-                  <li>Basement Web Cleaning</li>
+                  <li>Basement Web Removal</li>
                   <li>Garage & Basement Cleaning</li>
                   <li>Furniture Vaccumed & Moved</li>
                   <li>Organic Cleaning Available</li>
