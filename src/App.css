@@ -190,7 +190,7 @@
     width: 50%;
 }
 .skills .skills-image {
-    background-image: url("./cleaning.jpg");
+    background-image: url("./cleaning.png");
 
     /* Background image is centered vertically and horizontally at all times */
     background-position: center center;
