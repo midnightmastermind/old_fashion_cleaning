@@ -89,7 +89,7 @@
   font-family:Arial;
   content: "\201C";
   color: #F5DEB3;
-  font-size:4em;
+  font-size:2em;
   position: absolute;
   left: 10px;
   top:-10px;
@@ -325,6 +325,43 @@
     /* This is what makes the background image rescale based
        on the container's size */
     background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.message .bella .quote {
+      font-size: 2.4em;
+      width: auto;
+      font-family:Open Sans;
+      font-style:italic;
+      color: white;
+      padding:1.2em 30px 1.2em 75px;
+      border-left:8px solid #F5DEB3;
+      position: relative;
+      background: transparent;
+      text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.message .bella .quote::before{
+  font-family:Arial;
+  content: "\201C";
+  color: white;
+  font-size:2em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+.message .bella .quote::after{
+  content: '';
+}
+
+.message .bella .quote span{
+  display:block;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
 }
 
 .message .contact-form {
@@ -426,6 +463,9 @@
     .message .bella {
         width: 100%;
         height: 500px;
+    }
+    .message .bella .quote {
+        font-size: 1em;
     }
 }
 
