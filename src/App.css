@@ -10,11 +10,12 @@
 
 .App-header-container {
   background-color: #222;
-  height: 75px;
   position: fixed;
   width: 100%;
   z-index: 1;
   top: 0px;
+  height: 86px;
+  padding: 5px 0px;
 }
 .App-header {
     display: flex;
@@ -32,6 +33,9 @@
 .App-header .contact {
     display: flex;
     flex-direction: column;
+}
+.App-header .contact code {
+    padding-bottom: 5px;
 }
 .App-header .title h2 {
     margin-left: 20px;
@@ -469,7 +473,7 @@
     }
     .App-image {
         height: 300px;
-        margin-top: 60px;
+        margin-top: 70px;
         background-position-y: 0;
     }
     .App-logo {

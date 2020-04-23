@@ -87,7 +87,7 @@ class App extends Component {
                 <ul>
                   <li>Residential & Commerical Cleaning</li>
                   <li>Pressure Washing</li>
-                  <li>Virus Disinfecting</li>
+                  <li>COVID 19, Virus, & Flu Disinfecting (light switches, phone receivers, arm-rests, door handles, bathrooms, kitchen)</li>
                   <li>Apartment Move-out Cleaning & Common Hallways</li>
                   <li>Basement Web Cleaning</li>
                   <li>Garage & Basement Cleaning</li>
