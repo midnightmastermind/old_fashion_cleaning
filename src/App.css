@@ -185,7 +185,6 @@
 .skills {
     display: flex;
     height: auto;
-    padding-right: 10px;
 }
 .skills .skills-image-container {
     width: 50%;
@@ -223,6 +222,7 @@
     font-weight: normal;
     font-size: 25px;
     display: flex;
+    padding-right: 10px;
 }
 .skills .skills-description p {
     text-align: left;
