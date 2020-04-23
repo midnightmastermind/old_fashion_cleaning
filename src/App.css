@@ -153,6 +153,7 @@
     font-weight: normal;
     font-size: 25px;
     display: flex;
+    padding-right: 10px;
 }
 .services-offered .services-description p {
     text-align: left;
@@ -184,6 +185,7 @@
 .skills {
     display: flex;
     height: auto;
+    padding-right: 10px;
 }
 .skills .skills-image-container {
     width: 50%;
