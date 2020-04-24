@@ -124,6 +124,9 @@ class App extends Component {
             <blockquote className="quote">Todd was referred to me by Frisia day, and has done great work at my home for over two years!<span>-Carol K</span></blockquote>
             <blockquote className="quote">Excellent cleaning company. Despite my dog doing his best to leave orders in my house. Todd always finds a way to leave my house tidy and smelling fresh. That same dog of mine is allergic to dust mites Todd has made his life that much more pleasant with his cleaning. Would recommend to anybody.<span>-Marteze M</span></blockquote>
             <blockquote className="quote">Very thorough cleaning. Reliable and friendly service<span>-Lori D</span></blockquote>
+            <blockquote className="quote">Todd is the perfect cleaner for our family. He is reliable, affordable, and flexible. He understands the needs of working parents, and every room he enters is left with love and care, especially spaces dedicated to our kids. We trust him and don’t know how we’d manage our household without him! <span>-Marissa R</span></blockquote>
+            <blockquote className="quote">Thorough, efficient, and detail oriented. No corner missed!<span>-Linda B</span></blockquote>
+            <blockquote className="quote">I have been using old-fashioned cleaning for over 6 years. The owner's attention to detail and meticulous approach is worth every penny. 100% satisfied.<span>Kelly B</span></blockquote>
         </div>
         <div className="divider"></div>
         <div className="message">
